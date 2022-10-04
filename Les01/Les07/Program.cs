@@ -4,17 +4,18 @@
 //918 -> 1
 
 
-int Method()
+int Method(string text)
 {
-int result = 456;
-Console.WriteLine($"наше число: {result}");
-return result;
+    Console.Write(text + " : ");
+    int value = int.Parse(Console.ReadLine());
+    return value;
 }
+
 void Method2(int number)
 {
     int result = (number / 10) % 10;
     Console.WriteLine($"Вторая цифра числа - {result}!");
-}
+    }
 
-int wel = Method();
-Method2(wel);
+int N = Method("введите число");
+Method2(N);
