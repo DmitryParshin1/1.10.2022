@@ -20,18 +20,19 @@ void Method2(int number)
     {
         int digit = number % 10;
         while (true)
+    {
+    if (number <= 1000)
         {
-            if (number % 1000 == number)
-            {
-                Console.WriteLine($"Третья цифра - {digit}");
-                break;
-            }
-            else
-            {
-               number /= 10;
-            }
-        }
+        int digit = number % 10;
+        Console.WriteLine($"Третья цифра - {digit}");
+        break;
     }
-}
+        else
+        {
+        number /= 10;
+    }
+    }
+    }
+    }
     int N = Method("введите число");
     Method2(N);
