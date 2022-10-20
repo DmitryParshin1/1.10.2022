@@ -14,7 +14,7 @@
         int arr(int[] get)
         {
             int qwerty = 0;
-            for (int index = 0; qwerty < get.Length; index++)
+            for (int index = 0; index < get.Length; index++)
             {
                 if (get[index] % 2 == 0)
                 {
