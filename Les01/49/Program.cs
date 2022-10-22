@@ -1,29 +1,33 @@
 ﻿// 49. Показать двумерный массив размером m×n заполненный вещественными числами
 
-void Get(double[,] number)
+double[,] Get(double[,] number)
 {
     for (int i = 0; i < number.GetLength(0); i++)
     {
         for (int j = 0; j < number.GetLength(1); j++)
         {
-            number[i,j] = new Random().Next(1,10);
-            Console.WriteLine($"{number[i,j]}");
+            number[i, j] = new Random().NextDouble() * 10;
         }
     }
+    return number;
 }
 
-double arr(double[,] qwerty)
+void Print(double[,] array)
 {
-    for (int i = 0; i < qwerty.GetLength(0); i++)
+    double sum = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < qwerty.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            qwerty[i,j] = qwerty[i,j]/100;
+            Console.Write($" {array[i, j]:N2} ");
         }
+        Console.WriteLine();
     }
-    return qwerty;
 }
 
 double[,] day = new double [5,5];
-Get(day);
-Console.WriteLine($"вещественныt числа {arr(day)}");
+day = Get(day);
+
+Console.Clear();
+Console.WriteLine("вещественныt числа: \n");
+Print(day);
