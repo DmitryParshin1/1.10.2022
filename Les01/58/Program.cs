@@ -35,11 +35,11 @@ int[,] NextArray(int[,] A, int[,] B)
 }
 
 int[,] A = new int [2, 2];
-Console.WriteLine(" Введите первую матрицу ");
+Console.WriteLine(" первая матрица ");
 Array(A);
 
 int[,] B = new int [2, 2];
-Console.WriteLine(" Введите первую матрицу ");
+Console.WriteLine(" вторая матрица ");
 Array(B);
 
 Console.WriteLine(" Результат ");
