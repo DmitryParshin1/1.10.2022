@@ -16,29 +16,33 @@ int[,] Array(int[,] number)
 Console.WriteLine();
 
 
-
 int[,] NextArray(int[,] arr)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    int A = arr.GetLength(0);
+    int B = arr.GetLength(1);
+    int[,] res = new int[A, B];
+    for (int i = 0; i < A; i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < B; j++)
         {
-            for (int k = 0; k < arr.GetLength(1) - 1; k++)
+            for (int k = 0; k < A - 1; k++)
             {
-                if(arr[i,k] < arr[i, k + 1])
+                if(res[A,B] < arr[i + 1, B])
                 {
-                    int sum = arr[i, k + 1];
-                    arr[i, k + 1] = arr[i,k];
-                    arr[i,k] = sum;
-                    Console.Write($" {sum} ");
+                    int sum = arr[i + 1, B];
+                    arr[i + 1, B] = res[A,B];
+                    res[A,B] = sum;
                 }
             }
         }
     }
-    return arr;
+    return res;
 }
-Console.WriteLine();
 
 int[,] day = new int [3, 3];
 day = Array(day);
-Console.WriteLine($" {NextArray(day)} ");
+
+Console.Clear();
+Console.WriteLine();
+NextArray(day);
+
