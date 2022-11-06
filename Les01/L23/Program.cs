@@ -38,6 +38,7 @@ void printresult(int n, string b)
     Console.WriteLine(b + " " + n);
 }
 
+Console.Clear();
 int[] day = new int [12];
 Array(day);
 Console.WriteLine();

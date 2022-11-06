@@ -2,8 +2,6 @@
 
 void Figure(int x, int y)
 {
-    Console.Clear();
-
     Console.SetCursorPosition(x, y);
     Console.Write("+");
     Console.SetCursorPosition(x, y + 1);
@@ -23,6 +21,11 @@ new Thread(() =>
 {
     while(true)
     {
+        Console.Clear();
+        Console.SetCursorPosition(0, 18);
+
+        System.Console.Write("++++++++++++++++++++++++");
+
         Figure(x, y);
         Thread.Sleep(500);
         y++;
@@ -47,3 +50,5 @@ while (true)
         Figure(x, y);
     }
 }
+
+// поворот фигуры
