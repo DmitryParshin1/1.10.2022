@@ -1,6 +1,6 @@
 ﻿// Показать натуральные числа от 1 до N, N задано
 
-int N = Input(" Введите положительное число ");
+/*int N = Input(" Введите положительное число ");
 int I = 1;
 if(N < 1)
 {
@@ -23,4 +23,12 @@ int Input(string text)
     Console.Write(text);
     return int.Parse(Console.ReadLine());
 }
+*/
+
+string NumbersRec(int a, int b)
+{
+    if(a <= b) return $" {a} " + NumbersRec(a + 1, b);
+    else return String.Empty;
+}
+Console.WriteLine(NumbersRec(1, 10));
 

@@ -1,16 +1,9 @@
 ﻿// Показать натуральные числа от N до 1, N задано
 
-/*int getValue(string text)
+string NumbersRes(int a, int b)
 {
-    Console.WriteLine(text + "  ");
-    int value = int.Parse(Console.ReadLine());
-    return value;
-}*/
-
-void Print(int s, int e)
-{
-    Console.Write(s + ", ");
-    if(s < e) Print(s + 1, e);
+    if(a <= b) return NumbersRes(a + 1, b) + $" {a} ";
+    else return String.Empty;
     
 }
-Print(1, 10); Console.WriteLine();
+Console.WriteLine(NumbersRes(1, 10));
