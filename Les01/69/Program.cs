@@ -1,6 +1,6 @@
-﻿// 69. Найти сумму элементов от M до N, N и M заданы
+﻿//69. Найти сумму элементов от M до N, N и M заданы
 
-/*Console.WriteLine(" Введите число А:  ");
+Console.WriteLine(" Введите число А:  ");
 int NumberA = int.Parse(Console.ReadLine());
 
 Console.WriteLine(" Введите число B:  ");
@@ -18,13 +18,13 @@ void NumberSum(int NumberA, int NumberB, int Sum)
 }
 
 NumberSum(NumberA, NumberB, 0);
-*/
 
-int SumRec(int n)
+
+/*int SumRec(int n)
 {
      if(n == 0) return 0;
     else return n + SumRec(n -1);
 }
 
-Console.WriteLine(SumRec(10));
+Console.WriteLine(SumRec(10));*/
 
